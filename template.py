@@ -1,44 +1,44 @@
 import os 
 import logging
-from pathlib import Path
+rom pathlib import Path
 
-logging.basicConfig(level = logging.INFO , format = "[%(asctime)s] : %(message)s:")
+logging.basicConig(level = logging.INO , ormat = "[%(asctime)s] : %(message)s:")
 
 project_name = 'textSummarizer'
-list_of_files =  [
-  ".github/workflows/.gitkeep",
-  f"src/{project_name}/__init__.py",
-  f"src/{project_name}/components/__init__.py",
-  f"src/{project_name}/utils/__init__.py",
-  f"src/{project_name}/utils/common.py",
-  f"src/{project_name}/logging/__init__.py",
-  f"src/{project_name}/config/configuration.py",
-  f"src/{project_name}/pipeline/__init__.py",
-  f"src/{project_name}/entity/__init__.py",
-  f"src/{project_name}/constants/__init__.py",
-  "DockerFile",
+list_o_iles =  [
+  ".github/worklows/.gitkeep",
+  "src/textSummarizer/__init__.py",
+  "src/textSummarizer/components/__init__.py",
+  "src/textSummarizer/utils/__init__.py",
+  "src/textSummarizer/utils/common.py",
+  "src/textSummarizer/logging/__init__.py",
+  "src/textSummarizer/conig/coniguration.py",
+  "src/textSummarizer/pipeline/__init__.py",
+  "src/textSummarizer/entity/__init__.py",
+  "src/textSummarizer/constants/__init__.py",
+  "Dockerile",
   "setup.py",
   "requirements.txt",
   "app.py",
   "main.py",
   "research/trails.ipynb",
   "params.yaml",
-  "config/config.yaml"
+  "conig/conig.yaml"
 
 ]
 
-for filepath in list_of_files:
-  filepath = Path(filepath)
-  filedir , filename = os.path.split(filepath)
+or ilepath in list_o_iles:
+  ilepath = Path(ilepath)
+  iledir , ilename = os.path.split(ilepath)
 
-  if filedir !="":
-    os.makedirs(filedir , exist_ok = True)
-    logging.info(f"{filedir} created  for {filename}")
+  i iledir !="":
+    os.makedirs(iledir , exist_ok = True)
+    logging.ino("{iledir} created  or {ilename}")
 
-  if (not os.path.exists(filedir)) or (os.path.getsize == 0):
-    with open(filepath ,"w") as f:
+  i (not os.path.exists(iledir)) or (os.path.getsize == 0):
+    with open(ilepath ,"w") as :
       pass
-      logging.info(f"Creating empty file for {filepath}")
+      logging.ino("Creating empty ile or {ilepath}")
 
   else : 
-    logging.info("file already exists ")
+    logging.ino("ile already exists ")
